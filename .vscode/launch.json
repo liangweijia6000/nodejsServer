@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Current TS File",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/dest/main.js",
+            "args": [
+                "${relativeFile}"
+            ],
+            "cwd": "${workspaceRoot}/dest",
+            "protocol": "inspector",
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std"
+            
+        }
+    ]
+}
