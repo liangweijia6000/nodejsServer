@@ -3,8 +3,6 @@ import { getLogger } from "log4js";
 const logger =  getLogger(__filename.replace(__dirname, ""));
 logger.level = 'all';
 
-console.log("config.ts");
-
 export class CServerConfig {
     ip:string;
     port:number;
