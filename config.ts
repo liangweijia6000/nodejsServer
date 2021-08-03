@@ -14,11 +14,14 @@ export class CServerConfig {
 
 }
 
+//静态class
 export class CConfig {
     
+    //对应config表格中的两组配置项
     static gameServerConfig:CServerConfig;
     static loginServerConfig:CServerConfig;
 
+    //从文件读出
     static init() {
         logger.info("Config init");
         const serverConfig = require("../config/serverConfig.json");

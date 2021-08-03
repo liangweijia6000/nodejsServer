@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Current TS File",
+            "name": "Start",
             "type": "node",
             "request": "launch",
             "program": "${workspaceRoot}/dest/main.js",
