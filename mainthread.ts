@@ -1,4 +1,5 @@
 import { getLogger } from "log4js";
+import { CTimer } from "./timer";
 
 const logger =  getLogger(__filename.replace(__dirname, ""));
 logger.level = 'all';
@@ -38,6 +39,8 @@ export class CMainThread {
         //更新次数
         this.mainLoopTimes++;
         logger.info("MainThread main exec times:", this.mainLoopTimes);
+
+        CTimer.update();
     }
 
     //停止

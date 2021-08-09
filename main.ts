@@ -1,7 +1,11 @@
-import { getLogger } from 'log4js';
-
 import { CConfig } from './config'
 import { CMainThread } from './mainthread';
+import { CBiubiubiu } from './biubiubiu';
+import { CTimer } from './timer';
+import { CNetWork } from './network';
+
+import { getLogger, Logger } from 'log4js';
+
 
 //log输出文件名
 const logger =  getLogger(__filename.replace(__dirname, ""));
@@ -29,6 +33,15 @@ function main() {
     //主循环定时器
     let mainThread = new CMainThread();
     mainThread.start();
+
+    //TimerTest
+    //let abiu1 = new CBiubiubiu(1);
+    //let abiu2 = new CBiubiubiu(2);
+
+    //CTimer.add(abiu1.printId.bind(abiu1));
+    //CTimer.add(abiu2.printId.bind(abiu2));
+
+    CNetWork.start();
 }
 
 //程序入口
