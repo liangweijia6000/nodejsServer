@@ -4,11 +4,10 @@ import { CTimer } from "./timer";
 const logger =  getLogger(__filename.replace(__dirname, ""));
 logger.level = 'all';
 
-//此class应该是单例
 export class CMainThread {
 
-    //加!延迟初始化
-    timeout!:NodeJS.Timeout;
+    //
+    timeout:NodeJS.Timeout;
 
     //循环次数
     mainLoopTimes:number;
@@ -38,7 +37,7 @@ export class CMainThread {
 
         //更新次数
         this.mainLoopTimes++;
-        logger.info("MainThread main exec times:", this.mainLoopTimes);
+        //logger.info("MainThread main exec times:", this.mainLoopTimes);
 
         CTimer.update();
     }

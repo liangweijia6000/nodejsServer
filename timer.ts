@@ -22,7 +22,7 @@ export class CTimer {
     static timerArr:CTimer[] = [];
 
     static update() {
-        logger.info("Timer.update static");
+        //logger.info("Timer.update static");
         for(let timer of this.timerArr)
         {
             timer.callback();

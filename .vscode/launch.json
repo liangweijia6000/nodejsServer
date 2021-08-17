@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Start",
+            "name": "Server Start",
             "type": "node",
             "request": "launch",
             "program": "${workspaceRoot}/dest/main.js",
@@ -15,6 +15,20 @@
             "internalConsoleOptions": "openOnSessionStart",
             "outputCapture": "std"
             
+        },
+        {
+            "name": "Client",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/dest/testclient.js",
+            "args": [
+                "${relativeFile}"
+            ],
+            "cwd": "${workspaceRoot}/dest",
+            "protocol": "inspector",
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std"
         }
     ]
 }
