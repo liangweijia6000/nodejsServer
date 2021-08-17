@@ -57,7 +57,6 @@ class ListNode {
 }
 
 function climbStairs(n: number): number {
-    process.memoryUsage();
     return n;
 };
 
