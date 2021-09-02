@@ -7,6 +7,8 @@ import { singleton } from './servercommon';
 
 import { getLogger, Logger } from 'log4js';
 
+//import * as fs from 'fs';
+
 
 //log输出文件名
 const logger = getLogger(__filename.replace(__dirname, ""));
@@ -44,23 +46,4 @@ function main() {
 }
 
 //程序入口
-//main();
-
-
-class ListNode {
-    val: number
-    next: ListNode | null
-    constructor(val?: number, next?: ListNode | null) {
-        this.val = (val === undefined ? 0 : val)
-        this.next = (next === undefined ? null : next)
-    }
-}
-
-function climbStairs(n: number): number {
-    return n;
-};
-
-//
-
-logger.debug(climbStairs(160));
-
+main();
